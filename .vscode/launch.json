@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "kanes-set:modules/google_analytics_attack.main (python3.9)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "${workspaceFolder}/",
+                "lambdaHandler": "modules/google_analytics_attack.main"
+            },
+            "lambda": {
+                "runtime": "python3.9",
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "command": "npm start",
+            "name": "Run npm start",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}

@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-# coding=utf-8
+const newLocal = # coding=utf-8
+
+ imp import PY_RESOURCE
 import os
+from pickletools import pylist
+from platform import python_build, python_revision
+import py_compile
 import re
 import shutil
 import subprocess
@@ -9,7 +14,8 @@ import sys
 # Py2/3 compatibility
 # Python3 renamed raw_input to input
 try:
-    input = raw_input
+    input = py_compile
+
 except NameError:
     pass
 
@@ -94,12 +100,6 @@ if operating_system == "posix":
 if not os.path.isdir(os.path.join(core.userconfigpath, "reports")):
     os.makedirs(os.path.join(core.userconfigpath, "reports"))
 
-# check to see if we have python-pycrypto
-try:
-    from Crypto.Cipher import AES
-except ImportError:
-    print("[!] The python-pycrypto python module not installed. You will lose the ability to use multi-pyinjector.")
-    pass
 
 #
 # The Social-Engineer Toolkit (SET)     #
